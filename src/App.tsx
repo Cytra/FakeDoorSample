@@ -1,11 +1,13 @@
 import './App.css';
-import Header from './Header/Header';
-import Pricing from './Pricing/Pricing';
-import Footer from './Footer/Footer';
-import About from './About/About';
+import Header from './Pages/Header';
+import Pricing from './Pages/Pricing';
+import Footer from './Pages/Footer';
+import About from './Pages/About';
+import Landing from './Pages/Landing';
+import Subscribe from './Pages/Subscribe';
+import Documentation from './Pages/Documentation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { lime, purple } from '@mui/material/colors';
 
 const defaultTheme = createTheme({
   palette: {
@@ -22,6 +24,20 @@ const defaultTheme = createTheme({
       contrastText: "#000",
     },
   },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
 });
 
 function App() {
@@ -31,8 +47,11 @@ function App() {
         <Header></Header>
         <Router>
           <Routes>
-            <Route path="/" Component={About} />
+            <Route path="/" Component={Landing} />
             <Route path="/pricing" Component={Pricing} />
+            <Route path="/about" Component={About} />
+            <Route path="/documentation" Component={Documentation} />
+            <Route path="/subscribe" Component={Subscribe} />
           </Routes>
         </Router>
         <Footer></Footer>

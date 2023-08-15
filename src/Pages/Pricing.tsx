@@ -9,44 +9,48 @@ import StarIcon from '@mui/icons-material/StarBorder';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-
-
 const tiers = [
   {
     title: 'Free',
     price: '0',
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      'API requests - 100',
+      'JavaScript rendering',
+      'Rotating Proxies',
+      'Geotargeting',
+      'Screenshots',
     ],
     buttonText: 'Sign up for free',
     buttonVariant: 'outlined',
   },
   {
-    title: 'Pro',
+    title: 'Freelance',
     subheader: 'Most popular',
-    price: '15',
+    price: '50',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
+      'API requests - 10.000',
+      'JavaScript rendering',
+      'Rotating Proxies',
+      'Geotargeting',
+      'Screenshots',
+      'Priority Email Support'
     ],
     buttonText: 'Get started',
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
-    price: '30',
+    title: 'Startup',
+    price: '100',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'API requests - 50.000',
+      'JavaScript rendering',
+      'Rotating Proxies',
+      'Geotargeting',
+      'Screenshots',
+      'Priority Email Support',
+      'Dedicated Account Manager'
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Get started',
     buttonVariant: 'outlined',
   },
 ];
@@ -65,9 +69,7 @@ export default function Pricing() {
           Pricing
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" component="p">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. It&apos;s built with default MUI components with little
-          customization.
+        Cancel anytime!
         </Typography>
       </Container>
       {/* End hero unit */}
@@ -130,6 +132,7 @@ export default function Pricing() {
                 </CardContent>
                 <CardActions>
                   <Button
+                    href='/subscribe'
                     fullWidth
                     variant={tier.buttonVariant as 'outlined' | 'contained'}
                   >

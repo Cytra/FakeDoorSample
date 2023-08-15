@@ -2,19 +2,18 @@ import { Box, Button, Container, Grid, List, ListItem, ListItemIcon, ListItemTex
 import StarIcon from '@mui/icons-material/Star';
 
 const features = [
-    'High-quality materials',
-    'Advanced technology integration',
-    'Sleek and modern design',
-    'Easy setup and usage',
-    'Enhanced durability',
+    'JavaScript rendering',
+    'Rotating Proxies',
+    'Geotargeting',
+    'Screenshots',
 ];
 export default function About() {
     return (
         <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
             <Typography variant="h4" gutterBottom align="center">
-                Product Features
+                Features
             </Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} alignItems={'center'}>
                 <Grid item xs={8}>
                     <List
                         sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
@@ -30,9 +29,9 @@ export default function About() {
                         ))}
                     </List>
                 </Grid>
-                <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Grid sx={{ display: 'flex' }}>
-                        <Button href="/pricing">Prices and Plans</Button>
+                <Grid item xs={4}>
+                    <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <Button href="/pricing" variant="contained">Prices and Plans</Button>
                     </Grid>
                 </Grid>
             </Grid>

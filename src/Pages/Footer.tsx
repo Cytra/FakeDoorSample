@@ -5,6 +5,10 @@ const footers = [
         title: 'Company',
         description: ['about', 'pricing'],
     },
+    {
+        title: 'Api',
+        description: ['documentation'],
+    },
 ];
 
 export default function Footer() {
