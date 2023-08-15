@@ -7,3 +7,5 @@ npm start
 Create campaign in Brevo, add Iframe link to Subscribe page
 
 # Upload to AWS
+
+Will be uploaded once master is updated
