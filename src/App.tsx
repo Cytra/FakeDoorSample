@@ -1,4 +1,5 @@
 import './App.css';
+import React, {useEffect } from 'react';
 import Header from './Pages/Header';
 import Pricing from './Pages/Pricing';
 import Footer from './Pages/Footer';
@@ -8,6 +9,11 @@ import Subscribe from './Pages/Subscribe';
 import Documentation from './Pages/Documentation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-Q57960FK5W"; // OUR_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
+
 
 const defaultTheme = createTheme({
   palette: {
@@ -41,6 +47,11 @@ const defaultTheme = createTheme({
 });
 
 function App() {
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <div className="App">
       <ThemeProvider theme={defaultTheme}>
