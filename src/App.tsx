@@ -9,7 +9,7 @@ import Subscribe from './Pages/Subscribe';
 import Documentation from './Pages/Documentation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ReactGA from "react-ga4";
+import ReactGA from "react-ga";
 
 ReactGA.initialize("G-RNPGVRWRE7");
 
@@ -47,7 +47,7 @@ const defaultTheme = createTheme({
 function App() {
   
   useEffect(() => {
-    ReactGA.send(window.location.pathname);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
