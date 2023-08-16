@@ -9,11 +9,9 @@ import Subscribe from './Pages/Subscribe';
 import Documentation from './Pages/Documentation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ReactGA from 'react-ga';
-const TRACKING_ID = "G-Q57960FK5W"; // OUR_TRACKING_ID
+import ReactGA from "react-ga4";
 
-ReactGA.initialize(TRACKING_ID);
-
+ReactGA.initialize("G-RNPGVRWRE7");
 
 const defaultTheme = createTheme({
   palette: {
@@ -49,7 +47,7 @@ const defaultTheme = createTheme({
 function App() {
   
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send(window.location.pathname);
   }, []);
 
   return (
